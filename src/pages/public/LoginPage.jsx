@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function LoginPage() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,6 +19,7 @@ export function LoginPage() {
     e.preventDefault();
     console.log("Correo electrónico:", email);
     console.log("Contraseña:", password);
+    navigate("/");
   };
 
   return (

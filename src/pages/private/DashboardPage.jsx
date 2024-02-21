@@ -1,14 +1,14 @@
-import { HomePage } from "./HomePage";
+import { Link, Outlet } from "react-router-dom";
 
 export function DashboardPage() {
   return (
     <>
-      <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-2 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+      <header className="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-2 shadow">
+        <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
           Dashboard
         </a>
         <button
-          class="navbar-toggler position-absolute d-md-none collapsed"
+          className="navbar-toggler position-absolute d-md-none collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#sidebarMenu"
@@ -16,47 +16,44 @@ export function DashboardPage() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-nav">
-          <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="#">
+        <div className="navbar-nav">
+          <div className="nav-item text-nowrap">
+            <Link to="/login" className="text-light">
               Cerrar sesión
-            </a>
+            </Link>
           </div>
         </div>
       </header>
-      <div class="container-fluid">
-        <div class="row">
+      <div className="container-fluid">
+        <div className="row vh-100">
           <nav
             id="sidebarMenu"
-            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+            className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
           >
-            <div class="position-sticky pt-3">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <span data-feather="home"></span>
-                    Home
-                  </a>
+            <div className="position-sticky pt-3">
+              <ul className="nav flex-column">
+                <li className="nav-item">
+                  <Link to="/home" className="text-primary">
+                    Inicio
+                  </Link>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="file"></span>
-                    Users
-                  </a>
+                <li className="nav-item">
+                  <Link to="/users" className="text-primary">
+                    Usuarios
+                  </Link>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="shopping-cart"></span>
-                    Articles
-                  </a>
+                <li className="nav-item">
+                  <Link to="/articles" className="text-primary">
+                    Artículos
+                  </Link>
                 </li>
               </ul>
             </div>
           </nav>
-          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <HomePage />
+          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <Outlet />
           </main>
         </div>
       </div>
