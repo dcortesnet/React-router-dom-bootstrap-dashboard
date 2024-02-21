@@ -17,7 +17,6 @@ export function LoginPage() {
     e.preventDefault();
     console.log("Correo electrónico:", email);
     console.log("Contraseña:", password);
-    // Aquí puedes agregar la lógica para enviar los datos del formulario a tu backend para el inicio de sesión del usuario
   };
 
   return (
