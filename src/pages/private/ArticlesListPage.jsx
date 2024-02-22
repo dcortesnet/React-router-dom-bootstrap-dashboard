@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 export function ArticlesListPage() {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (articleId) => {
+    navigate(`/articles/${articleId}`);
+  };
+
   return (
     <>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -36,7 +44,11 @@ export function ArticlesListPage() {
               <td>0.2 kg</td>
               <td>31-12-2024</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(12345)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -49,7 +61,11 @@ export function ArticlesListPage() {
               <td>0.5 kg</td>
               <td>28-02-2023</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(67890)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -62,7 +78,11 @@ export function ArticlesListPage() {
               <td>0.3 kg</td>
               <td>15-06-2023</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(24680)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -75,7 +95,11 @@ export function ArticlesListPage() {
               <td>0.1 kg</td>
               <td>10-10-2025</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(13579)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -88,7 +112,11 @@ export function ArticlesListPage() {
               <td>2 kg</td>
               <td>20-08-2026</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(86420)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>

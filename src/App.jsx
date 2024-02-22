@@ -7,7 +7,9 @@ import { NotFoundPage } from "./pages/public/NotFoundPage";
 import "./App.css";
 import { HomePage } from "./pages/private/HomePage";
 import { ArticlesListPage } from "./pages/private/ArticlesListPage";
-import { UserListPage } from "./pages/private/UsersListPages";
+import { UserListPage } from "./pages/private/UsersListPage";
+import ArticlesDetailPage from "./pages/private/ArticlesDetailPage";
+import { UserDetailPage } from "./pages/private/UsersDetailPage";
 
 const PrivateRoutes = () => {
   let auth = { token: true };
@@ -23,7 +25,12 @@ function App() {
           <Route element={<DashboardPage />}>
             <Route element={<HomePage />} path="home" />
             <Route element={<ArticlesListPage />} path="articles" />
+            <Route
+              element={<ArticlesDetailPage />}
+              path="articles/:articleId"
+            />
             <Route element={<UserListPage />} path="users" />
+            <Route element={<UserDetailPage />} path="users/:userId" />
           </Route>
         </Route>
         <Route element={<LoginPage />} path="login" />

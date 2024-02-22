@@ -15,7 +15,7 @@ export function LoginPage() {
     setPassword(e.target.value);
   };
 
-  const handleOnSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Correo electrónico:", email);
     console.log("Contraseña:", password);
@@ -27,7 +27,7 @@ export function LoginPage() {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <h1>Login</h1>
-          <form onSubmit={handleOnSubmit}>
+          <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Correo electrónico

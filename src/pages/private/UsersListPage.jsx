@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 export function UserListPage() {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (userId) => {
+    navigate(`/users/${userId}`);
+  };
+
   return (
     <>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -36,7 +44,11 @@ export function UserListPage() {
               <td>king@example.com</td>
               <td>17-11-1981</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7839)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -49,7 +61,11 @@ export function UserListPage() {
               <td>jones@example.com</td>
               <td>02-04-1981</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7566)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -62,7 +78,11 @@ export function UserListPage() {
               <td>blake@example.com</td>
               <td>01-05-1981</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7698)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -75,7 +95,11 @@ export function UserListPage() {
               <td>clark@example.com</td>
               <td>09-06-1981</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7782)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -88,7 +112,11 @@ export function UserListPage() {
               <td>scott@example.com</td>
               <td>19-04-1987</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7788)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -101,7 +129,11 @@ export function UserListPage() {
               <td>ford@example.com</td>
               <td>03-12-1981</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7902)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
@@ -114,7 +146,11 @@ export function UserListPage() {
               <td>miller@example.com</td>
               <td>23-01-1982</td>
               <td>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  onClick={() => handleViewDetails(7934)}
+                  className="btn btn-primary btn-sm"
+                >
                   Ver detalles
                 </button>
               </td>
